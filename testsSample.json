@@ -1,0 +1,17 @@
+{
+	"tests": [
+		{
+			"type": "ping",
+			"ip": "8.8.8.8",
+			"statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0" 
+		},
+		{
+			"type": "mongo",
+			"user": "user",
+			"password": "password",
+			"database": "database",
+			"ip": "localhost",
+			"statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0" 
+		}
+	]
+}
