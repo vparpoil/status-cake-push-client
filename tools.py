@@ -89,5 +89,5 @@ def testMongo(test):
 
 def pingStatusCake(url):
     printInfo("Status Cake Ping for url: {url}".format(url=url))
-    os.system('curl {url}'.format(url=url))
+    os.system('curl "{url}"'.format(url=url))
     return
