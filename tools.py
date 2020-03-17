@@ -87,6 +87,19 @@ def testMongo(test):
     return
 
 
+def testCurl(test):
+    try:
+        result = os.popen("curl {url}".format(url=test['url'])).read()
+        if test['textToMatch'] in result:
+            pingStatusCake(test['statusCakeUrl'])
+        else:
+            printFail(
+                'Curl test failed for {url} - no match for {textToMatch}'.format(url=test['url'], textToMatch=test['textToMatch']))
+    except:
+        printFail('Curl test failed for {url}'.format(url=test['url']))
+    return
+
+
 def pingStatusCake(url):
     printInfo("Status Cake Ping for url: {url}".format(url=url))
     os.system('curl "{url}"'.format(url=url))

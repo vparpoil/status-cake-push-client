@@ -12,3 +12,6 @@ if __name__ == '__main__':
 
         elif test['type'] == "mongo":
             testMongo(test)
+
+        elif test['type'] == "curl":
+            testCurl(test)

@@ -12,6 +12,12 @@
 			"database": "database",
 			"ip": "localhost",
 			"statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0" 
+		},
+		{
+			"type": "curl",
+			"url": "",
+			"textToMatch": "",
+			"statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0" 
 		}
 	]
 }

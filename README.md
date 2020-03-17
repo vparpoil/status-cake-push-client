@@ -31,6 +31,19 @@ Simple mongo connexion test
 	}
 ```
 
+### Curl test with string match
+
+Simple curl test. The result of the curl command is tested with a simple string match 
+
+```json
+	{
+		"type": "curl",
+		"url": "",
+		"textToMatch": "",
+		"statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0" 
+	}
+```
+
 
 ### Requirements
 
