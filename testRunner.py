@@ -2,7 +2,6 @@
 # coding: utf8
 from tools import *
 
-
 if __name__ == '__main__':
     tests = loadTests()
 

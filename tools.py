@@ -96,7 +96,8 @@ def testCurl(test):
             pingStatusCake(test['statusCakeUrl'])
         else:
             printFail(
-                'Curl test failed for {url} - no match for {textToMatch}'.format(url=test['url'], textToMatch=test['textToMatch']))
+                'Curl test failed for {url} - no match for {textToMatch}'.format(url=test['url'],
+                                                                                 textToMatch=test['textToMatch']))
     except:
         printFail('Curl test failed for {url}'.format(url=test['url']))
     return
