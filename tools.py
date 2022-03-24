@@ -6,6 +6,8 @@ import json
 import logging
 from pymongo import MongoClient
 from pymongo.errors import ServerSelectionTimeoutError
+import socket
+from contextlib import closing
 
 # get an instance of the logger object this module will use
 logger = logging.getLogger(__name__)
@@ -97,6 +99,16 @@ def testCurl(test):
                 'Curl test failed for {url} - no match for {textToMatch}'.format(url=test['url'], textToMatch=test['textToMatch']))
     except:
         printFail('Curl test failed for {url}'.format(url=test['url']))
+    return
+
+
+def testPort(test):
+    with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as sock:
+        if sock.connect_ex((test["url"], test["port"])) == 0:
+            pingStatusCake(test['statusCakeUrl'])
+        else:
+            printFail('Port test failed for {url} - port {port} is closed'.format(url=test['url'],
+                                                                                  port=test['port']))
     return
 
 

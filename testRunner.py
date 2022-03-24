@@ -15,3 +15,6 @@ if __name__ == '__main__':
 
         elif test['type'] == "curl":
             testCurl(test)
+
+        elif test['type'] == "port":
+            testPort(test)

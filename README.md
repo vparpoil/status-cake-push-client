@@ -44,6 +44,18 @@ Simple curl test. The result of the curl command is tested with a simple string 
 	}
 ```
 
+### Test if a port is open
+
+Simple test to check that a port is opened. Could be use to ensure a service is running as expected.
+
+```json
+    {
+    "type": "port",
+    "port": 3131,
+    "url": "192.168.1.12",
+    "statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0"
+}
+```
 
 ### Requirements
 
