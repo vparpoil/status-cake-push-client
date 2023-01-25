@@ -117,3 +117,20 @@ def pingStatusCake(url):
     printInfo("Status Cake Ping for url: {url}".format(url=url))
     os.system('curl "{url}"'.format(url=url))
     return
+
+
+def testPostgresql(test):
+    import psycopg2
+    try:
+        conn = psycopg2.connect(
+            host=test['ip'],
+            database=test['database'],
+            port=test['port'],
+            user=test['user'],
+            password=test['password']
+        )
+        conn.close()
+        pingStatusCake(test['statusCakeUrl'])
+    except (Exception, psycopg2.DatabaseError):
+        printFail('Postgresql test failed for host: {host}'.format(host=test['ip']))
+    return

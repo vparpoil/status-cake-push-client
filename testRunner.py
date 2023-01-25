@@ -17,3 +17,6 @@ if __name__ == '__main__':
 
         elif test['type'] == "port":
             testPort(test)
+
+        elif test['type'] == "postgresql":
+            testPostgresql(test)

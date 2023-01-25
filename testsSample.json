@@ -18,6 +18,15 @@
 			"url": "",
 			"textToMatch": "",
 			"statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0" 
+		},
+		{
+			"type": "postgresql",
+			"user": "user",
+			"password": "password",
+			"database": "database",
+			"ip": "localhost",
+			"port": "5432",
+			"statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0"
 		}
 	]
 }

@@ -9,7 +9,7 @@ Python App to push regular updates to status cake
 Simple ping test
 
 ```json
-    {
+{
     "type": "ping",
     "ip": "8.8.8.8",
     "statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0"
@@ -21,7 +21,7 @@ Simple ping test
 Simple mongo connexion test
 
 ```json
-    {
+{
     "type": "mongo",
     "user": "user",
     "password": "password",
@@ -31,12 +31,28 @@ Simple mongo connexion test
 }
 ```
 
+### Postgresql connexion test
+
+Simple postgresql connexion test
+
+```json
+{
+    "type": "postgresql",
+    "user": "user",
+    "password": "password",
+    "database": "database",
+    "ip": "localhost",
+    "port": "5432",
+    "statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0"
+}
+```
+
 ### Curl test with string match
 
 Simple curl test. The result of the curl command is tested with a simple string match
 
 ```json
-    {
+{
     "type": "curl",
     "url": "",
     "textToMatch": "",
@@ -49,7 +65,7 @@ Simple curl test. The result of the curl command is tested with a simple string 
 Simple test to check that a port is opened. Could be use to ensure a service is running as expected.
 
 ```json
-    {
+{
     "type": "port",
     "port": 3131,
     "url": "192.168.1.12",
@@ -62,7 +78,7 @@ Simple test to check that a port is opened. Could be use to ensure a service is 
 Python is required. There is also a dependency to the pymongo package to test mongo database being up
 
 ```
-pip install pymongo
+pip install pymongo psycopg2-binary
 ```
 
 ### Installation
