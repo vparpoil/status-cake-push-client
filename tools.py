@@ -134,3 +134,20 @@ def testPostgresql(test):
     except (Exception, psycopg2.DatabaseError):
         printFail('Postgresql test failed for host: {host}'.format(host=test['ip']))
     return
+
+
+def testSystemctl(test):
+    import subprocess
+    try:
+        # Execute the systemctl command to get the service status
+        cmd = ["systemctl", "status", test['service']]
+        output = subprocess.check_output(cmd, stderr=subprocess.STDOUT, universal_newlines=True)
+
+        # Check if the service is active (running)
+        if "Active: active (running)" in output:
+            pingStatusCake(test['statusCakeUrl'])
+        else:
+            printFail('Systemctl test failed for service: {service}'.format(service=test['service']))
+    except subprocess.CalledProcessError as e:
+        printFail('Systemctl test failed for service: {service}'.format(service=test['service']))
+    return

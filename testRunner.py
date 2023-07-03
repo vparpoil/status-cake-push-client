@@ -20,3 +20,6 @@ if __name__ == '__main__':
 
         elif test['type'] == "postgresql":
             testPostgresql(test)
+
+        elif test['type'] == "systemctl":
+            testSystemctl(test)

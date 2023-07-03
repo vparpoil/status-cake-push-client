@@ -27,6 +27,11 @@
 			"ip": "localhost",
 			"port": "5432",
 			"statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0"
+		},
+		{
+			"type": "systemctl",
+			"service": "my-custom-service-name",
+			"statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0"
 		}
 	]
 }
