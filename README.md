@@ -31,9 +31,9 @@ Simple mongo connexion test
 }
 ```
 
-### Postgresql connexion test
+### Postgresql connection test
 
-Simple postgresql connexion test
+Simple postgresql connection test
 
 ```json
 {
@@ -43,6 +43,7 @@ Simple postgresql connexion test
     "database": "database",
     "ip": "localhost",
     "port": "5432",
+    "sslmode": "require",
     "statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0"
 }
 ```

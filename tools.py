@@ -127,7 +127,8 @@ def testPostgresql(test):
             database=test['database'],
             port=test['port'],
             user=test['user'],
-            password=test['password']
+            password=test['password'],
+            sslmode=test['sslmode']
         )
         conn.close()
         pingStatusCake(test['statusCakeUrl'])
