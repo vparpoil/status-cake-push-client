@@ -26,6 +26,7 @@
 			"database": "database",
 			"ip": "localhost",
 			"port": "5432",
+			"sslmode": "require",
 			"statusCakeUrl": "https://push.statuscake.com/?PK=PK&TestID=TestID&time=0"
 		},
 		{
